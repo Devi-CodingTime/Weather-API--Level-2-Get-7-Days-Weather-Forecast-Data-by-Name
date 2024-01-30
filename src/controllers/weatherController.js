@@ -42,7 +42,7 @@ async function saveDataToDatabase(data) {
 async function getForecastDataByName(cityName) {
   
   const data = await getDataFromDatabase();
-  const cityData = data.find((city)=>city.city.toLowerCae()==cityName.toLowerCase())
+  const cityData = data.find((city)=>city.city.toLowerCase()==cityName.toLowerCase())
   if(!cityData)
   {
     throw new Error({message:"City not found"});
